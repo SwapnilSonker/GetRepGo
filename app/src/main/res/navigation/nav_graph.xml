@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/landingScreen">
+
+    <fragment
+        android:id="@+id/landingScreen"
+        android:name="dev.swapnil.getrepgo.Landing.LandingScreen"
+        android:label="fragment_landing_screen"
+        tools:layout="@layout/fragment_landing_screen" >
+        <action
+            android:id="@+id/action_landingScreen_to_repoScreen"
+            app:destination="@id/repoScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/repoScreen"
+        android:name="dev.swapnil.getrepgo.Repo.RepoScreen"
+        android:label="fragment_repo_screen"
+        tools:layout="@layout/fragment_repo_screen" >
+        <action
+            android:id="@+id/action_repoScreen_to_landingScreen"
+            app:destination="@id/landingScreen" />
+    </fragment>
+</navigation>
