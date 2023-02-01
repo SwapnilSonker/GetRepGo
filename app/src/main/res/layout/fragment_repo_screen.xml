@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <EditText
                 android:id="@+id/ownerName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="@id/repoName"/>
 
-            <TextView
+            <EditText
                 android:id="@+id/repoName"
                 android:layout_width="match_parent"
                 android:padding="10dp"
