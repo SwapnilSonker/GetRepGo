@@ -2,11 +2,24 @@ package dev.swapnil.getrepgo.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import androidx.navigation.fragment.NavHostFragment
+import dagger.hilt.android.AndroidEntryPoint
 import dev.swapnil.getrepgo.R
+import dev.swapnil.getrepgo.databinding.ActivityMainBinding
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding:ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentcontainerview) as NavHostFragment
+        val navController = navHostFragment.navController
     }
 }
