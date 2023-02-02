@@ -17,6 +17,8 @@ class AddRepoViewModel @Inject constructor(
     private val api: ApiService
 ) : ViewModel() {
 
+    val showProgressBar = MutableLiveData(true)
+
     val message = MutableLiveData<String>()
 
     fun addRepo(owner: String, repo: String) {

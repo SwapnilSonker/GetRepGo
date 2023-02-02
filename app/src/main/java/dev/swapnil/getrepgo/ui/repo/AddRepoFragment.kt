@@ -29,6 +29,10 @@ class AddRepoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModel.showProgressBar.observe(viewLifecycleOwner) {
+            binding.progressBar.visibility = if (it) View.VISIBLE else View.GONE
+        }
+
         viewModel.message.observe(viewLifecycleOwner) {
             if (it.isNotEmpty()) {
                 Snackbar.make(
