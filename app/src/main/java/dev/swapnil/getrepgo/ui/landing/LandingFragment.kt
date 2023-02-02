@@ -9,11 +9,14 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import dev.swapnil.getrepgo.R
 import dev.swapnil.getrepgo.databinding.FragmentLandingBinding
+import dev.swapnil.getrepgo.databinding.ListRepoItemBinding
 
 @AndroidEntryPoint
 class LandingFragment : Fragment() {
 
     private lateinit var binding: FragmentLandingBinding
+
+    private lateinit var binding2: ListRepoItemBinding
 
     private val viewModel by viewModels<LandingViewModel>()
 
@@ -64,8 +67,15 @@ class LandingFragment : Fragment() {
                 }
             } else {
                 binding.layoutEmpty.visibility = View.GONE
+                binding.listRepos.adapter = LandingAdapter(it)
+
                 binding.listRepos.visibility = View.VISIBLE
+
+
+
             }
+
         }
+
     }
 }
