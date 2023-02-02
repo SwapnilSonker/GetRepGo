@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 import dev.swapnil.getrepgo.data.GithubRepo
 
 @Database(entities = [GithubRepo::class], version = 1)
-abstract class RepoDatabase : RoomDatabase(){
+abstract class RepoDatabase : RoomDatabase() {
 
-    abstract fun repoDao() : RepoDao
+    abstract fun repoDao(): RepoDao
 }

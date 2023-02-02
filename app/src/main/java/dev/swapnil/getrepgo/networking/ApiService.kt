@@ -14,7 +14,6 @@ interface ApiService {
         "X-GitHub-Api-Version: 2022-11-28"
     )
     suspend fun getRepoDetails(
-        @Path("owner_name") ownerName: String,
-        @Path("repo_name") repoName: String
+        @Path("owner_name") ownerName: String, @Path("repo_name") repoName: String
     ): GithubRepo
 }

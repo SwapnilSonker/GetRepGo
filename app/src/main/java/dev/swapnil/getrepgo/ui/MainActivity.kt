@@ -1,11 +1,8 @@
 package dev.swapnil.getrepgo.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import androidx.navigation.fragment.NavHostFragment
+import androidx.appcompat.app.AppCompatActivity
 import dagger.hilt.android.AndroidEntryPoint
-import dev.swapnil.getrepgo.R
 import dev.swapnil.getrepgo.databinding.ActivityMainBinding
 
 @AndroidEntryPoint
