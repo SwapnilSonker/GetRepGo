@@ -3,24 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/landingScreen">
+    app:startDestination="@id/landingFragment">
 
     <fragment
-        android:id="@+id/landingScreen"
-        android:name="dev.swapnil.getrepgo.Landing.LandingScreen"
+        android:id="@+id/landingFragment"
+        android:name="dev.swapnil.getrepgo.ui.landing.LandingFragment"
         android:label="fragment_landing_screen"
-        tools:layout="@layout/fragment_landing_screen" >
+        tools:layout="@layout/fragment_landing" >
         <action
             android:id="@+id/action_landingScreen_to_repoScreen"
             app:destination="@id/repoScreen" />
     </fragment>
     <fragment
         android:id="@+id/repoScreen"
-        android:name="dev.swapnil.getrepgo.Repo.RepoScreen"
+        android:name="dev.swapnil.getrepgo.ui.repo.AddRepoFragment"
         android:label="fragment_repo_screen"
-        tools:layout="@layout/fragment_repo_screen" >
+        tools:layout="@layout/fragment_add_repo" >
         <action
             android:id="@+id/action_repoScreen_to_landingScreen"
-            app:destination="@id/landingScreen" />
+            app:destination="@id/landingFragment" />
     </fragment>
 </navigation>
